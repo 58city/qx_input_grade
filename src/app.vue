@@ -139,16 +139,20 @@ export default {
       this.jsonResult = result;
     },
     insertGrade(){
-      var sels=document.querySelectorAll(".CJTD[id$=_zhcj]>input");
-      for(var i=0; i<sels.length; i++){
-        var stu_name=document.querySelectorAll(".CJTD[id$=_zhcj]>input")[i].parentElement.parentElement.children[2].innerText.slice(0,-1);
-        this.setInputValue(sels[i], this.jsonResult[stu_name]);
+      var ipts=document.querySelectorAll(".CJTD[id$=_zhcj]>input");
+      if(ipts && ipts.length>0){
+        for(var i=0; i<ipts.length; i++){
+          var stu_name=document.querySelectorAll(".CJTD[id$=_zhcj]>input")[i].parentElement.parentElement.children[2].innerText.slice(0,-1);
+          this.setInputValue(ipts[i], this.jsonResult[stu_name]);
+        }
       }
-      // var sels=document.querySelectorAll(".CJTD>select");
-      // for(var i=0; i<sels.length; i++){
-      //   var stu_name=document.querySelectorAll(".CJTD>select")[i].parentElement.parentElement.children[2].innerText.slice(0,-1);
-      //   setSelectedValue(sels[i], this.jsonResult[stu_name]); 
-      // }
+      var sels=document.querySelectorAll(".CJTD>select");
+      if (sels && sels.length>0) {
+        for(var i=0; i<sels.length; i++){
+          var stu_name=document.querySelectorAll(".CJTD>select")[i].parentElement.parentElement.children[2].innerText.slice(0,-1);
+          setSelectedValue(sels[i], this.jsonResult[stu_name]); 
+        }
+      }
     },
     setInputValue(input, valueToSet) {
       input.value=valueToSet
