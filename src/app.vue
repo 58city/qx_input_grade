@@ -101,7 +101,7 @@ export default {
           if (isNaN(score) || score < 0 || score > 100) {
             errorLines.push(
               `第${lineNum}行：分数必须是【0-100之间的有效数字】或【优秀、良好、合格、不合格】（当前值：${
-                scoreStr || "空"
+                scoreStr||"空"
               }）`
             );
             return;
