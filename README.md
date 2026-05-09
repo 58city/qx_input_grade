@@ -55,6 +55,7 @@ npm start
 // @version      0.0.1
 // @description  try to take over the world!
 // @author		 eda
+// @match        http://jwgl.lypt.edu.cn/jwweb/XSCJ/KCCJ_ADD_rpt_T.aspx
 // @match        http://jwgl.lypt.edu.cn/jwweb/XSCJ/Tea_HJCJLR_addtemp_rpt.aspx
 
 // ==/UserScript==
