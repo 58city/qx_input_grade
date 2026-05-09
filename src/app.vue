@@ -96,15 +96,18 @@ export default {
         }
 
         // 校验2：分数必须是数字且在0-100之间
-        const score = Number(scoreStr);
-        if (isNaN(score) || score < 0 || score > 100) {
-          errorLines.push(
-            `第${lineNum}行：分数必须是0-100之间的有效数字（当前值：${
-              scoreStr || "空"
-            }）`
-          );
-          return;
+        if(scoreStr!="优秀" && scoreStr!="良好" && scoreStr!="合格" && scoreStr!="不合格"){
+          const score = Number(scoreStr);
+          if (isNaN(score) || score < 0 || score > 100) {
+            errorLines.push(
+              `第${lineNum}行：分数必须是【0-100之间的有效数字】或【优秀、良好、合格、不合格】（当前值：${
+                scoreStr || "空"
+              }）`
+            );
+            return;
+          }
         }
+        
 
         // 校验通过，加入有效数据
         validData.push({
@@ -138,12 +141,25 @@ export default {
     insertGrade(){
       var sels=document.querySelectorAll(".CJTD[id$=_zhcj]>input");
       for(var i=0; i<sels.length; i++){
-          var stu_name=document.querySelectorAll(".CJTD[id$=_zhcj]>input")[i].parentElement.parentElement.children[2].innerText.slice(0,-1);
-          this.setSelectedValue(sels[i], this.jsonResult[stu_name]);
+        var stu_name=document.querySelectorAll(".CJTD[id$=_zhcj]>input")[i].parentElement.parentElement.children[2].innerText.slice(0,-1);
+        this.setInputValue(sels[i], this.jsonResult[stu_name]);
       }
+      // var sels=document.querySelectorAll(".CJTD>select");
+      // for(var i=0; i<sels.length; i++){
+      //   var stu_name=document.querySelectorAll(".CJTD>select")[i].parentElement.parentElement.children[2].innerText.slice(0,-1);
+      //   setSelectedValue(sels[i], this.jsonResult[stu_name]); 
+      // }
     },
-    setSelectedValue(input, valueToSet) {
+    setInputValue(input, valueToSet) {
       input.value=valueToSet
+    },
+    setSelectedValue(select, valueToSet) {
+      for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].innerText === valueToSet) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
     },
     // 模态框拖动逻辑
     handleMouseDown(e) {

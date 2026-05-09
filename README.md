@@ -55,7 +55,7 @@ npm start
 // @version      0.0.1
 // @description  try to take over the world!
 // @author		 eda
-// @match        http://jwgl.lypt.edu.cn/jwweb/XSCJ/KCCJ_ADD_rpt_T.aspx
+// @match        http://jwgl.lypt.edu.cn/jwweb/XSCJ/Tea_HJCJLR_addtemp_rpt.aspx
 
 // ==/UserScript==
 
@@ -81,6 +81,8 @@ npm run build
 油猴市场的优点是不用审核，即发即用，非常方便。
 
 ● 将/dist/app.bundle.js 文件部署到cdn上，获取到对应url。（可放github上，如果托管到git上最好做cdn加速）
+
+> 我的CDN部署路径：https://cdn.jsdelivr.net/gh/58city/qx_input_grade@main/dist/app.bundle.js
 
 ● 登录[油猴市场](https://greasyfork.org/)，谷歌账号或 github 账号都可使用。
 
