@@ -112,7 +112,7 @@ export default {
         // 校验通过，加入有效数据
         validData.push({
           name: name.trim(),
-          score: score,
+          score: isNaN(scoreStr) ? scoreStr : Number(scoreStr)
         });
       });
 
