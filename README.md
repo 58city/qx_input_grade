@@ -83,7 +83,7 @@ npm run build
 
 ● 将/dist/app.bundle.js 文件部署到cdn上，获取到对应url。（可放github上，如果托管到git上最好做cdn加速）
 
-> 我的CDN部署路径：https://cdn.jsdelivr.net/gh/58city/qx_input_grade@master/dist/app.bundle.js
+> 我的CDN部署路径：https://cdn.jsdelivr.net/gh/58city/qx_input_grade@primary/dist/app.bundle.js
 
 ● 登录[油猴市场](https://greasyfork.org/)，谷歌账号或 github 账号都可使用。
 
