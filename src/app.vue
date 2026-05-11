@@ -150,7 +150,7 @@ export default {
       if (sels && sels.length>0) {
         for(var i=0; i<sels.length; i++){
           var stu_name=document.querySelectorAll(".CJTD>select")[i].parentElement.parentElement.children[2].innerText.slice(0,-1);
-          setSelectedValue(sels[i], this.jsonResult[stu_name]); 
+          this.setSelectedValue(sels[i], this.jsonResult[stu_name]); 
         }
       }
     },
