@@ -85,7 +85,7 @@ npm run build
 
 > 我的CDN部署路径：https://cdn.jsdelivr.net/gh/58city/qx_input_grade@primary/dist/app.bundle.js
 
-● 登录[油猴市场](https://greasyfork.org/)，谷歌账号或 github 账号都可使用。
+● 登录[油猴市场](https://greasyfork.org/)，谷歌账号或github账号都可使用。
 
 ● 点击账号名称，再点击**发布你编写的脚本**
 
